@@ -1,0 +1,9 @@
+{
+  "TC14578": {
+    "username": "admin",
+    "password": "manager",
+    "login_page_title": "actiTIME - Login",
+    "home_page_title": "actiTIME - Enter Time-Track"
+  }
+
+}
