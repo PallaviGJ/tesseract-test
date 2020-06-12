@@ -15,7 +15,7 @@ def get_driver_instance():
     env_info = options.env.lower()
 
     if browser_type == "chrome":
-        driver = Chrome()
+        driver = Chrome("./browser-servers/chromedriver.exe")
     elif browser_type == "firefox":
         driver = Firefox("./browser-servers/geckodriver.exe")
     elif browser_type == "ie":
@@ -27,11 +27,11 @@ def get_driver_instance():
     driver.implicitly_wait(30)
 
     if url_info == "prod":
-        driver.get("https://demo.actitime.com/login.do")
+        driver.get("https://actitime.jmr.co.za/actitime/login.do")
     elif url_info == "staging":
         driver.get("https://192.168.1.101/login.html")
     else:
-        driver.get("https://actitime.jmr.co.za/actitime/login.do")
+        driver.get("https://demo.actitime.com/login.do ")
 
     return driver
 

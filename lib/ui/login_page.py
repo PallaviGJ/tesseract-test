@@ -9,8 +9,7 @@ class LoginPage:
 
     def get_username_textbox(self):
         try:
-            return self.driver.find_element_by_name("username")
-            #return self.driver.find_element_by_id("username") -- for url-prod
+            return self.driver.find_element_by_id("username")
         except:
             return None
 
@@ -22,8 +21,8 @@ class LoginPage:
 
     def get_login_button(self):
         try:
-            return self.driver.find_element_by_xpath("//input[@type='submit']")
-            #return self.driver.find_element_by_id("loginButton")-- for url-prod
+
+            return self.driver.find_element_by_id("loginButton")
         except:
             return None
 
@@ -38,3 +37,7 @@ class LoginPage:
         wait.until(expected_conditions.visibility_of(self.get_username_textbox()))
         wait.until(expected_conditions.visibility_of(self.get_password_textbox()))
         wait.until(expected_conditions.visibility_of(self.get_login_button()))
+
+
+#return self.driver.find_element_by_xpath("//input[@type='submit']") -- for url-prod
+#return self.driver.find_element_by_name("username") -- for url-prod
